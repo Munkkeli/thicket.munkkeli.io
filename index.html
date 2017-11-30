@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Test</title>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="materialdesignicons.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1>Through the Thicket</h1>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#story">Story</a>
+        <a href="#tech">Technology</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h1>Through the Thicket</h1>
+      <div class="credits">by Tuomas, Neea & Tony</div>
+    </div>
+
+    <div id="features" class="content">
+      <figure class="right">
+        <div class="circle">
+          <i class="mdi mdi-map"></i>
+        </div>
+        <div class="info">
+            <h2>Go on an adventure</h2>
+            <p>Help young Brian Jr. wander through a local forest. It might sound easy, but Brian will soon discover that the path isn't exactly straight. You will face challenges, get to explore three unique areas and collect exotic new items on your way home.</p>
+        </div>
+      </figure>
+
+      <figure class="left">
+        <div class="circle">
+          <i class="mdi mdi-school"></i>
+        </div>
+        <div class="info">
+          <h2>Student made</h2>
+          <p>The game was made as a part of a school course, thus assuring you the best quality experience. The game runs on anything that turns on and never experiences any issues, giving you the best experience possible. However, if you manage to find something odd, feel free to contact us on GitHub.</p>
+        </div>
+      </figure>
+
+      <figure class="right">
+        <div class="circle">
+          <i class="mdi mdi-code-braces"></i>
+        </div>
+        <div class="info">
+          <h2>Open source</h2>
+          <p>The game is completely free and open source. This means you can download the source code and play with it yourself, free of charge. The tools we used to build the game are also all free, more info on them can be found below.</p>
+          <p>We use the <a href="https://github.com/Munkkeli/Thicket/blob/master/LICENSE">MIT license</a>.</p>
+        </div>
+      </figure>
+    </div>
+
+    <div id="story" class="story">
+      <h1>The Story of Brian Jr.</h1>
+      <hr />
+      <p>You are playing as young Brian Jr. Brian is a 12-year-old fifth grader boy. The day is cloudy and Brian’s school day has just come to an end when he suddenly gets a text message from his mother. “Brian love, I’m making cinnamon rolls come, home quick before they get cold!” Brian loving his mother's cinnamon rolls decides to take a shortcut to get home as quickly as possible. The road that he normally takes goes around a thick forest that Brian has never gone through before. The forest looks dark and spooky, but Brian’s love for cinnamon rolls takes over, and he decides to go through anyway.</p>
+      <p>You have to help him get through the <b>Thicket.</b></p>
+    </div>
+
+    <div id="tech" class="tech">
+      <h1><i class="mdi mdi-wrench"></i> Tools used to build our game</h1>
+
+      <figure>
+        <img src="logos/unity.png" />
+        <div class="info">
+          <h2>Unity</h2>
+          <p>Cross-platform game engine primarily used to develop video games and simulations for computers, consoles and mobile devices.</p>
+        </div>
+      </figure>
+
+      <figure>
+        <img src="logos/tiled.png" />
+        <div class="info">
+          <h2>Tiled</h2>
+          <p>Your free, easy to use and flexible tile map editor. Supports orthogonal, isometric and hexagonal maps.</p>
+        </div>
+      </figure>
+
+      <figure>
+        <img src="logos/github.png" />
+        <div class="info">
+          <h2>Github</h2>
+          <p>GitHub brings teams together to work through problems, move ideas forward, and learn from each other along the way.</p>
+        </div>
+      </figure>
+
+      <figure>
+        <div class="dot"></div>
+        <div class="info">
+          <h2>Tiled2Unity <small>by Sean Barton</small></h2>
+          <p>Tiled2Unity is a free utility with one goal in mind: Easy exporting of Tiled Map Editor TMX files into your Unity projects.</p>
+          <a href="http://www.seanba.com/tiled2unity"></a>
+        </div>
+      </figure>
+
+      <figure>
+        <div class="dot"></div>
+        <div class="info">
+          <h2>Zelda-like tilesets and sprites <small>by ArMM1998</small></h2>
+          <p>16x16 tileset including terrain, castles, houses, decoration and characters.</p>
+          <a href="https://opengameart.org/content/zelda-like-tilesets-and-sprites"></a>
+        </div>
+      </figure>
+
+      <figure>
+        <div class="dot"></div>
+        <div class="info">
+          <h2>Tutorial series on A* pathfinding <small>by Sebastian Lague</small></h2>
+          <p>Best A* tutorial series on the internet.</p>
+          <a href="https://www.youtube.com/watch?v=-L-WgKMFuhE&list=PLFt_AvWsXl0cq5Umv3pMC9SPnKjfp9eGW"></a>
+        </div>
+      </figure>
+    </div>
+
+    <div id="contact" class="map">
+      <h1><i class="mdi mdi-email"></i> Contact us</h1>
+
+      <div id="map"></div>
+    </div>
+
+    <script>
+      function initMap() {
+        var metropolia = { lat: 60.2208035, lng: 24.8052071 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: metropolia,
+          draggable: false,
+          fullscreenControl: false,
+          keyboardShortcuts: false,
+          disableDefaultUI: true,
+
+          styles: [
+            {
+              featureType: 'poi.business',
+              stylers: [{ visibility: 'off' }]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'labels.icon',
+              stylers: [{ visibility: 'off' }]
+            }
+          ],
+        });
+
+        var marker = new google.maps.Marker({ position: metropolia, map: map });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEF6dbeVMx52vzrmUois5NX9oMXJsSmIY&callback=initMap"></script>
+  </body>
+</html>

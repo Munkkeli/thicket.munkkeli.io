@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #9ABD74;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  padding: 14px 16px 0 16px;
+  height: 48px;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+header nav {
+  height: 32px;
+  font-family: 'Roboto', serif;
+  text-align: center;
+}
+
+header nav a {
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #eee;
+}
+
+header nav a:before {
+  content: ' — ';
+  color: #9ABD74;
+}
+
+header nav a:first-child:before {
+  content: '';
+}
+
+.hero {
+  position: relative;
+  margin: 0;
+  height: calc(100vh + 128px);
+  background: linear-gradient(
+    180deg, 
+    rgba(46, 64, 26, 0.75) 0%, 
+    rgba(154, 189, 116, 0.5) 100%
+  ), url("back.png");
+  background-size: cover;
+  z-index: 9;
+}
+
+.hero h1 {
+  margin: 0;
+  padding: calc(50vh - 64px) 0 0 0;
+  width: 100%;
+  font-size: 64px;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #fff;
+
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hero .credits {
+  margin: 16px auto;
+  width: 224px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-family: 'Roboto', serif;
+  border-radius: 48px;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #333;
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 128px 100vw;
+  border-color: transparent transparent #fff transparent;
+}
+
+.content {
+  position: relative;
+  padding: 32px 300px 176px 300px;
+
+  box-sizing: border-box;
+}
+
+.content figure {
+  position: relative;
+  margin: 0 0 64px 0;
+  padding: 0 25% 0 0;
+  min-height: 128px;
+
+  box-sizing: border-box;
+}
+
+.content figure.right {
+  padding: 0 0 0 25%;
+}
+
+.content figure .circle {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  text-align: center;
+  line-height: 128px;
+  border-radius: 50%;
+  background-color: #9ABD74;
+}
+
+.content figure.right .circle {
+  right: 0;
+}
+
+.content figure .circle i {
+  font-size: 64px;
+  color: #fff;
+}
+
+.content figure .info {
+  padding: 16px 0 0 160px;
+  font-family: 'Roboto', serif;
+
+  box-sizing: border-box;
+}
+
+.content figure.right .info {
+  padding: 16px 160px 0 0;
+  text-align: right;
+}
+
+.content figure h2 {
+  margin: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+.content figure p {
+  margin: 16px 0 0 0;
+  line-height: 22px;
+  color: #666;
+}
+
+.story {
+  position: relative;
+  padding: 32px 400px 224px 400px;
+  background-color: #9ABD74;
+
+  box-sizing: border-box;
+}
+
+.story:before {
+  content: '';
+  position: absolute;
+  top: -128px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 128px 100vw;
+  border-color: transparent transparent #9ABD74 transparent;
+}
+
+.story:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 128px 100vw;
+  border-color: transparent transparent #fff transparent;
+}
+
+.story h1 {
+  margin: 0;
+  padding: 64px 0 0 0;
+  width: 100%;
+  font-size: 64px;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+.story hr {
+  margin: 32px 0 0 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.story p {
+  margin: 0;
+  padding: 32px 0 0 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'Roboto', serif;
+  color: #fff;
+}
+
+.tech {
+  position: relative;
+  padding: 32px 500px 32px 500px;
+
+  box-sizing: border-box;
+}
+
+.tech h1 {
+  margin: 0;
+  padding: 32px 0 64px 0;
+  width: 100%;
+  font-size: 32px;
+  font-family: 'Roboto', serif;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+.tech figure {
+  margin: 0 0 64px 0;
+  min-height: 96px;
+}
+
+.tech figure img {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+}
+
+.tech figure .dot {
+  position: absolute;
+  margin: 12px 0 0 64px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #9ABD74;
+}
+
+.tech figure .info {
+  padding: 16px 0 0 128px;
+  font-family: 'Roboto', serif;
+
+  box-sizing: border-box;
+}
+
+.tech figure .info h2 {
+  margin: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+.tech figure .info h2 small {
+  display: block;
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.tech figure .info p {
+  margin: 16px 0 0 0;
+  line-height: 22px;
+  color: #666;
+}
+
+.tech figure .info a {
+  display: block;
+  margin: 16px 0 0 0;
+  font-weight: bold;
+}
+
+.tech figure .info a:after {
+  content: 'Find out more here'
+}
+
+.map {
+  position: relative;
+  padding: 192px 0 0 0;
+  width: 100%;
+  height: calc(100vh + 128px);
+  background-color: #333;
+
+  box-sizing: border-box;
+}
+
+.map:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 128px 100vw 0 0;
+  border-color: #fff transparent transparent transparent;
+  z-index: 1;
+}
+
+.map h1 {
+  position: relative;
+  margin: 0 auto 64px auto;
+  width: 260px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 32px;
+  font-family: 'Roboto', serif;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 48px;
+  background-color: #fff;
+  color: #333;
+  z-index: 1;
+}
+
+.map #map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 1300px) {
+  .content {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
+  .story {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
+  .tech {
+    padding-left: 256px;
+    padding-right: 256px;
+  }
+
+  .content figure {
+    margin: 0 0 64px 0;
+    padding: 0;
+    min-height: 128px;
+  }
+  
+  .content figure.right {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .tech {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
+  .story h1 {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .story {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .content figure .circle {
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+  }
+  
+  .content figure .circle i {
+    font-size: 32px;
+  }
+  
+  .content figure .info {
+    padding: 16px 0 0 96px;
+  }
+  
+  .content figure.right .info {
+    padding: 16px 96px 0 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tech {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
