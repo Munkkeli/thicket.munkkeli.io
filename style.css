@@ -5,6 +5,10 @@ html, body {
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   font-weight: bold;
   text-decoration: none;
@@ -100,7 +104,7 @@ header nav a:first-child:before {
 
 .hero .credits {
   margin: 16px auto;
-  width: 224px;
+  width: 344px;
   height: 48px;
   line-height: 48px;
   text-align: center;
